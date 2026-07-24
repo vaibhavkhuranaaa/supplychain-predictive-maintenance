@@ -1,36 +1,29 @@
-# [Project Name]
+# Supply Chain Predictive Maintenance
 
-[One-sentence description of what this does and why it matters, framed around the real-world use case — not the algorithm.]
+Status: **building**. This is a pending engineering project, not a production maintenance recommendation system.
 
-## Problem
-[What operational/business problem does this solve? Who would actually use this?]
+The intended workflow uses NASA C-MAPSS turbofan degradation data to build repeatable telemetry ingestion, remaining-useful-life features, a baseline and model comparison, and an equipment-at-risk view tied to operational error trade-offs.
 
-## Data
-- **Source:** [dataset name + where it comes from]
-- **Access:** [open / requires credentialing — link to how]
-- **Size/shape:** [rows, time range, entities — whatever orients the reader]
+## Data boundary
 
-## Architecture
-[Diagram — even a simple one made in draw.io/excalidraw exported as PNG, or an ASCII/mermaid diagram. Show data flow: source → processing → model → API → deployment.]
+- Source: NASA C-MAPSS public benchmark data under its published terms.
+- Classification: public benchmark telemetry.
+- Excluded: customer equipment, proprietary sensor streams, and real maintenance records.
+- Record source URL, terms, checksum, split policy, and derived artifacts before publishing evidence.
 
-## Key Results
-[The metrics that matter for this problem — not just accuracy. E.g. for fraud: precision/recall at a chosen threshold, latency. For healthcare: AUROC + calibration + a SHAP example. Be specific and honest, including failure modes.]
+## Planned architecture
 
-## How to Run Locally
-```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
-docker compose up --build
-```
-[Any additional setup — env vars, data download steps, etc.]
-
-## How to Deploy (Azure)
-```bash
-# [exact commands or reference to infra/ scripts]
+```mermaid
+flowchart LR
+  A[Versioned C-MAPSS files] --> B[Validated telemetry ingestion]
+  B --> C[Unit and regime features]
+  C --> D[Baseline and RUL model]
+  D --> E[Unit-held-out evaluation]
+  E --> F[Equipment-at-risk monitoring view]
 ```
 
-## Tech Stack
-[Bullet list — be specific about versions/services used, this is what gets scanned first]
+## Current gate
 
-## What I'd Improve Next
-[This section matters — shows you understand the limits of your own work. Be specific: what's the biggest gap, what would production-hardening actually require, what didn't you have time/data for.]
+The draft contract is structurally valid, but first-demo readiness is blocked on provenance, implemented ingestion/modeling, unit-safe evaluation, baseline comparison, tests/CI evidence, monitoring behavior, and deployment evidence. See `docs/STATE.md`, `docs/HANDOFF.md`, and `portfolio/project.json`.
+
+No RUL metric, avoided-downtime claim, deployment URL, or production claim should be added before that evidence exists.

@@ -1,0 +1,56 @@
+{
+  "version": 2,
+  "slug": "supplychain-predictive-maintenance",
+  "title": "Supply Chain Predictive Maintenance",
+  "summary": "Predictive-maintenance workflow for remaining-useful-life forecasting on NASA C-MAPSS turbofan data.",
+  "outcome": "Release-pending portfolio project; public presentation waits for reproducible evaluation and a verified deployment.",
+  "industries": [
+    "Supply chain",
+    "Industrial operations"
+  ],
+  "categories": [
+    "Data Engineering",
+    "AI/ML",
+    "Cloud"
+  ],
+  "stack": [
+    "Python",
+    "Machine learning",
+    "Docker"
+  ],
+  "githubUrl": "https://github.com/vaibhavkhuranaaa/supplychain-predictive-maintenance",
+  "liveUrl": null,
+  "deployment": {
+    "provider": "TBD",
+    "status": "release-pending",
+    "runtime": "Local Docker workflow",
+    "exposure": "private",
+    "productionClaim": false,
+    "verifiedAt": null,
+    "expiresAt": null,
+    "evidenceRefs": []
+  },
+  "metrics": [
+    "Remaining-useful-life evaluation evidence pending before public release"
+  ],
+  "stages": [
+    "Telemetry ingestion",
+    "Feature engineering",
+    "RUL modeling",
+    "Evaluation",
+    "Deployment hardening"
+  ],
+  "architecture": [
+    "NASA C-MAPSS data",
+    "Feature pipeline",
+    "RUL model",
+    "Evaluation report"
+  ],
+  "evaluation": [
+    "Unit-level holdout validation, error by operating regime, and baseline comparison required before release"
+  ],
+  "operationalTradeoffs": [
+    "Predictive lead time must be balanced against false maintenance actions and incomplete telemetry"
+  ],
+  "disclaimer": "Educational project using public benchmark data. It is not a production maintenance recommendation system."
+}
